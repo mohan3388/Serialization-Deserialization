@@ -5,8 +5,8 @@ class Program
 {
     public static void Main(String[] args)
     {
-        Console.WriteLine("Welcome To address book");
-        Console.WriteLine("1.Add contact Details\n2.Edit Contact Details");
+        Console.WriteLine("Welcome To the Program");
+        Console.WriteLine("1.Serialization in json\n2.Deserialization in json");
         Serialization serializeDeserialize = new Serialization();
 
         bool check = true;

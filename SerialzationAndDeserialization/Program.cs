@@ -6,7 +6,7 @@ class Program
     public static void Main(String[] args)
     {
         Console.WriteLine("Welcome To the Program");
-        Console.WriteLine("1.Serialization in json\n2.Deserialization in json");
+        Console.WriteLine("1.Serialization in xml\n2.Deserialization in xml");
         Serialization serializeDeserialize = new Serialization();
 
         bool check = true;

@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace SerialzationAndDeserialization
 {
@@ -13,17 +14,16 @@ namespace SerialzationAndDeserialization
     {
         public void Deserialize()
         {
-            string JsonData = @"
-{
-'Name':'mohan',
-'Desc':'Welcome the program'
+            string jsonData = @"{
+'Name':'Mohan',
+'Desc':'Welcome program'
 }";
-            BlogSite bsObj = JsonConvert.DeserializeObject<BlogSite>(JsonData);
-            Console.WriteLine(bsObj);
-        }
+      Blog bsObj = JsonConvert.DeserializeObject<Blog>(jsonData);
+            Console.WriteLine(bsObj.Name);
+        }  
     }
     [DataContract]
-    public class BlogSite
+    public class Blog
     {
         [DataMember]
         public string Name { get; set; }
